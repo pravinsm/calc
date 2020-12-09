@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Stopwatch/Timer</title>
+    
+    <link rel="stylesheet" href="assets/stopwatch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src = "assets/jquery.mousewheel.js"></script>
+		
+		<!-- iosSlider plugin -->
+		<script src = "assets/jquery.iosslider-vertical.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+			
+				$('.iosslider-vertical').iosSliderVertical({
+					scrollbarMargin: 0,
+					scrollbarWidth: 12,
+					scrollbarBorderRadius: 0,
+					scrollbarContainer: '.scrollbar',
+					snapToChildren: true,
+					infiniteSlider: true,
+					desktopClickDrag: true
+				});
+				
+			});
+		</script>
+</head>
+<body>
+  <div class="btn-group">
+    <button onclick="display_stopwatch()">STOPWATCH</button>
+    <button onclick="display_timer()">TIMER</button>
+  </div>
+  <div class="container_timer" id="cont_timer">
+    <div class="time" id="timer_set">
+    <!-- <div> -->
+      <div style="display: flex;justify-content: space-between;width: 150px;">
+
+        <div style="display:flex">
+  
+          <div class = 'iosslider-vertical'>
+        
+            <div class = 'slider' id= 'hour_2'></div>
+          
+          </div>
+          <div style="position: relative;">
+  
+            <p id="tag">hrs</p>
+  
+          </div>
+          
+        </div>
+        
+        <div style="display:flex">
+  
+          <div class = 'iosslider-vertical'>
+        
+            <div class = 'slider' id= 'minutes_2'></div>
+          
+          </div>
+          <div style="position: relative;">
+  
+            <p id="tag">min</p>
+  
+          </div>
+          
+        </div>
+  
+        <div style="display:flex">
+  
+          <div class = 'iosslider-vertical'>
+        
+            <div class = 'slider' id= 'seconds_2'></div>
+          
+          </div>
+          <div style="position: relative;">
+  
+            <p id="tag">sec</p>
+  
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="time" id="timer"></div>
+    <button onclick="timer_cd()" id="start" class="btn">Start</button>
+    <div class= "btn1">
+      <button onclick="reset()" id="restart">Reset</button>
+      <button onclick="pause()" id="pause">Pause</button>
+    </div>
+  </div>
+  <div>
+    <div class="container_stopwatch" id="cont_stopwatch">
+      <div class="time" id="stopwatch"></div>
+      <div class= "btn1">
+        <button onclick="s_start()" id="s_start_btn">Start</button>
+        <button onclick="s_lap()" id="s_lap_btn" disabled="true">Lap</button>
+      </div>
+    </div>
+    <div id="laps_cont">
+      <table id="laps"></table>
+    </div>
+  </div>
+  <div class="footer">
+    <p id="cpryt">
+      <span><a href="mailto:pravinsm10@gmail.com"><i class="fa fa-envelope" style="font-size:18px;"></i></a></span>&nbsp;
+      <span><a href="https://github.com/pravinsm"><i class="fa fa-github" style="font-size:18px;"></i></a></span>&nbsp;
+      <span><a href="https://www.linkedin.com/in/pravin-s-m-128610165"><i class="fa fa-linkedin-square" style="font-size:18px;"></i></a></span>
+    </p>
+  </div>
+
+<script src="assets/stopwatch.js"></script>  
+<script src="assets/timer.js"></script>
+</body>
+</html>

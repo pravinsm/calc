@@ -1,0 +1,222 @@
+*{
+  outline: none;
+}
+body{
+margin:0;
+padding:0;
+background: black;
+text-align: center;
+color: #7d7d7d;
+}
+button{
+  outline: none;
+}
+a{
+  color: inherit;
+}
+.btn-group button {
+  width:50%;
+  background-color: #4CAF50; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; 
+}
+
+
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+#Stopwatch_btn,#Timer_btn{
+width: 100%;
+justify-content: center;
+display: flex;
+}
+
+.container_stopwatch,.container_timer{
+margin-top:50px;
+width:250px;
+height:250px;
+position : relative;
+background-color: transparent;
+border-radius :50%;
+border: 3px dotted red ;
+}
+
+.container_stopwatch{
+  display: none;
+}
+
+.container_timer{
+display: inline-block;
+}
+
+
+
+.time{
+position: absolute;
+top:50%;
+left:50%;
+display: flex;
+transform: translate(-50%,-60%);
+}
+
+#hours,#minutes,#seconds{
+border: none;
+background: transparent;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+color: white;
+font-size: 20px;
+}
+
+#hours:hover,#minutes:hover,#seconds:hover{
+cursor: pointer;
+color: #ff071e;
+}
+
+#stopwatch,#timer{
+color: white;
+font-size: 36px;
+}
+
+.btn{
+position: absolute;
+bottom:10px;
+transform: translate(-50%,-50%);
+border:1px solid #ff071e;
+font-size: 16px;
+padding: 3px 20px;
+border-radius: 20px;
+background-color: #ff071e;
+color: white;
+}
+
+.btn1{
+position: absolute;
+bottom:10px;
+left:50%;
+display: flex;
+transform: translate(-50%,-50%);
+}
+
+#s_start_btn,#restart{
+border: 1px solid rgba(0,0,0,0.2);
+font-size: 14px;
+border-radius: 18px;
+background-color: rgba(255,0,0,0.3);
+color: #ff071e;
+margin: 10px;
+padding: 3px;
+width: 70px;
+justify-content: center;
+}
+
+#s_lap_btn{
+border: 1px solid #373737;
+font-size: 14px;
+border-radius: 18px;
+background-color: #373737;
+color: #fff;
+margin: 10px;
+padding: 3px;
+width: 70px;
+justify-content: center;
+}
+
+#s_lap_btn1,#pause{
+border: 1px solid #ff071e;
+font-size: 14px;
+border-radius: 18px;
+background-color: #ff071e;
+color: white;
+margin: 10px;
+padding: 3px;
+width: 70px;
+justify-content: center;
+}
+
+#s_start_btn,#s_lap_btn1{
+cursor: pointer;
+}
+#start:hover,#restart:hover,#pause:hover{
+background-color: transparent;
+border:1px solid #ff071e;
+color: #ff071e;
+}
+
+#restart,#pause{
+display: none;
+}
+tr{
+text-align: center;
+}
+td{
+width:100px;
+padding-top: 8px;
+}
+
+#laps_cont{
+color: white;
+display: flex;
+justify-content: center;
+margin-top:10px;
+margin-bottom:20px;
+}
+
+.footer{
+color: white;
+padding:0;
+position: fixed;
+width:100%;
+background-color: black;
+bottom:0;
+}
+#cpryt{
+padding:0;
+margin:0;
+font-size:12px;
+color: #7D7D7D;
+}
+.iosslider-vertical{
+  height: 105px;
+  width: 30px;
+}
+.item{
+  height: 35px;
+}
+.active1,.active2,.active3{
+  color: white;
+}
+.prev1,.prev2,.prev3{
+  background-image:linear-gradient(to bottom,#000, #888) ;
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.next1,.next2,.next3{
+  background-image:linear-gradient(to top,#151515, #fff) ;
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#tag{
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-25%,-80%);
+  color: aqua;
+}
